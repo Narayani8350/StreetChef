@@ -1,1 +1,41 @@
-The form you just built
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Registration</title>
+  <link rel="stylesheet" href="styles/seller.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Register Your Stall</h1>
+    <form id="registerForm" class="slide-up">
+      <label>Stall Name</label>
+      <input type="text" name="stall" required />
+
+      <label>Seller Name</label>
+      <input type="text" name="name" required />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" id="phone" required />
+
+      <button type="button" onclick="sendOTP()">Send OTP</button>
+
+      <div id="otpSection" style="display:none;">
+        <label>Enter OTP</label>
+        <input type="text" id="otp" />
+        <button type="button" onclick="verifyOTP()">Verify OTP</button>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>Register</button>
+    </form>
+
+    <div id="statusMsg"></div>
+  </div>
+
+  <script src="js/seller.js"></script>
+</body>
+</html>
